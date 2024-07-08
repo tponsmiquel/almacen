@@ -1,0 +1,5 @@
+Migrations for 'inventory':
+  inventory\migrations\0003_client_address_client_email_client_phone.py
+    - Add field address to client
+    - Add field email to client
+    - Add field phone to client

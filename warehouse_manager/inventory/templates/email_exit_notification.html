@@ -1,0 +1,91 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nuevo pedido del almacén</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #F1C40F;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #CACFD2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-size: 16px;
+        }
+        td.articulo {
+            background-color: #f9f9f9;  
+        }
+        td.pedido {
+            background-color: #f5f5dc;  
+        }
+        td.historico {
+            background-color: #acd09d;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p><strong>Fecha:</strong> {{ date }}</p>
+    <p><strong>Cliente:</strong> {{ client.name }}</p>
+
+    <h3></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Artículo</th>
+                <th>Pedido</th>
+                <th colspan="3">Histórico</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>2024</th>
+                <th>2023</th>
+                <th>2022</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exit in client_exits %}
+            <tr>
+                <td class="articulo">{{ exit.article.name }}</td>
+                <td class="pedido">{{ exit.quantity }}</td>
+                <td class="historico">{{ historical_data.2024|get_value:exit.article.name }}</td>
+                <td class="historico">{{ historical_data.2023|get_value:exit.article.name }}</td>
+                <td class="historico">{{ historical_data.2022|get_value:exit.article.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="http://localhost:8000/api/exits/authorize/{{ client_exits.0.id }}" class="button">Autorizar pedido</a>
+</body>
+</html>

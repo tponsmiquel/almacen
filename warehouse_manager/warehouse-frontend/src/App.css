@@ -1,0 +1,363 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.logout-button {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.6em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.section {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #adc7c3;
+}
+
+.section h1 {
+  color: #333;
+}
+
+.section h5 {
+  color: #333;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-container form {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.form-group.row.justify-content-center {
+  justify-content: center;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1em;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters-container select,
+.filters-container input,
+.filters-container button {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filters-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filters-container .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filters-container button:hover {
+  background-color: #0056b3;
+}
+
+.filters-container .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-container .form-group.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.form-container input[type="date"],
+.form-container .line-item {
+  flex: 1;
+  min-width: 150px;
+}
+
+.form-container button[type="button"] {
+  flex: 1;
+  min-width: 150px;
+  margin-right: 10px;
+}
+
+.form-container button[type="submit"] {
+  flex: 0 0 auto;
+  margin-top: 10px;
+  width: auto;
+  margin-left: auto;
+}
+
+.line-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.line-item select,
+.line-item input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.line-item button {
+  flex: 0 0 auto;
+  min-width: auto;
+}
+
+.buttons-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.section-card {
+  margin: 20px;
+  padding: 20px;
+  background-color: #e0e6e3;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-card h5 {
+  font-size: 1.10em;
+  margin-bottom: 15px;
+}
+
+/* Botón Primario */
+.btn-primary {
+  background-color: #007bff; /* Color azul típico de btn-primary */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Color de hover de btn-primary */
+}
+
+/* Botón Secundario */
+.btn-secondary {
+  background-color: #6c757d; /* Color gris típico de btn-secondary */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Color de hover de btn-secondary */
+}
+
+/* Botón de Información */
+.btn-info {
+  background-color: #17a2b8; /* Color azul claro típico de btn-info */
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #117a8b; /* Color de hover de btn-info */
+}
+
+/* Botón de Éxito */
+.btn-success {
+  background-color: #28a745; /* Color verde típico de btn-success */
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Color de hover de btn-success */
+}
+
+/* Botón de Peligro */
+.btn-danger {
+  background-color: #dc3545; /* Color rojo típico de btn-danger */
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Color de hover de btn-danger */
+}
+
+/* Estilos específicos para el div de gráficos */
+.chart-section {
+  background-color: #282c34; /* Fondo oscuro */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.chart-section h2 {
+  color: #61dafb;
+}
+
+.chart-section .form-group label {
+  color: #61dafb;
+}
+
+.chart-section .form-control {
+  background-color: #3a3f47;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+.chart-section .btn-primary {
+  background-color: #61dafb;
+  border: none;
+}
+
+.chart-section .btn-primary:hover {
+  background-color: #4a90e2;
+}
+
+/* Tamaño reducido para los botones de "+" y "-" */
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.875em;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+/* Tamaño más grande para el botón de "Enviar entrada" */
+.btn-lg {
+  padding: 10px 20px;
+  font-size: 1.25em;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}

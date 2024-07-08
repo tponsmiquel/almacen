@@ -1,0 +1,5 @@
+env\Scripts\activate
+cd warehouse_manager
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
